@@ -1,0 +1,14 @@
+REMARK original generated coordinate pdb file
+ATOM      1  C1  AAM1X   0       2.461  -0.650  -2.496  1.00  0.00      XO1  C
+ATOM      2  H2  AAM1X   0       2.696  -1.690  -2.582  1.00  0.00      XO1  H
+ATOM      3  H3  AAM1X   0       2.981  -0.235  -1.658  1.00  0.00      XO1  H
+ATOM      4  H4  AAM1X   0       1.407  -0.533  -2.356  1.00  0.00      XO1  H
+ATOM      5  C5  AAM1X   0       2.892   0.082  -3.781  1.00  0.00      XO1  C
+ATOM      6  H6  AAM1X   0       2.657   1.122  -3.695  1.00  0.00      XO1  H
+ATOM      7  H7  AAM1X   0       2.372  -0.333  -4.619  1.00  0.00      XO1  H
+ATOM      8  C8  AAM1X   0       4.409  -0.087  -3.984  1.00  0.00      XO1  C
+ATOM      9  O9  AAM1X   0       5.069   0.810  -4.569  1.00  0.00      XO1  O
+ATOM     10  N10 AAM1X   0       5.086  -1.296  -3.492  1.00  0.00      XO1  N
+ATOM     11  H11 AAM1X   0       5.082  -1.994  -4.208  1.00  0.00      XO1  H
+ATOM     12  H12 AAM1X   0       6.030  -1.074  -3.249  1.00  0.00      XO1  H
+END

@@ -1,0 +1,350 @@
+*  --------------------------------------------------------------------------  *
+*          CGenFF: Topology for the Charmm General Force Field v. 4.0          *
+*                    for Small Molecule Drug Design                            *
+*  --------------------------------------------------------------------------  *
+*
+
+﻿！MASS  -1  HGA1       1.00800 H ! alphatic proton, CH
+MASS  -1  HGA1       1.00800 H ! alphatic proton, CH
+MASS  -1  HGA2       1.00800 H ! alphatic proton, CH2
+MASS  -1  HGA3       1.00800 H ! alphatic proton, CH3
+MASS  -1  HGA4       1.00800 H ! alkene proton; RHC=
+MASS  -1  HGA5       1.00800 H ! alkene proton; H2C=CR
+MASS  -1  HGA6       1.00800 H ! aliphatic H on fluorinated C, monofluoro
+MASS  -1  HGA7       1.00800 H ! aliphatic H on fluorinated C, difluoro
+MASS -1 HGM0 1.00800 H ! aliphatic H, NEUTRAL trimethylamine (#)
+MASS -1 HGM1 1.00800 H ! aliphatic H, NEUTRAL dimethylamine (#)
+MASS -1 HGM2 1.00800 H ! aliphatic H, NEUTRAL methylamine (#)
+!(#) EXTREME care is required when doing atom typing on compounds that look like this. Use ONLY
+!on NEUTRAL METHYLAMINE groups, NOT Schiff Bases, but DO use on 2 out of 3 guanidine nitrogens
+MASS  -1  HGP1       1.00800 H ! polar H
+MASS  -1  HGP2       1.00800 H ! polar H, +ve charge
+MASS  -1  HGP3       1.00800 H ! polar H, thiol
+MASS  -1  HGP4       1.00800 H ! polar H, neutral conjugated -NH2 group (NA bases)
+MASS  -1  HGP5       1.00800 H ! polar H on quarternary ammonium salt (choline)
+MASS -1 HPM1 1.00800 H ! polar H, NEUTRAL dimethylamine (#), terminal alkyne H
+MASS -1 HPM2 1.00800 H ! polar H, NEUTRAL methylamine (#)
+MASS -1 HPM3 1.00800 H ! polar H, NEUTRAL ammonia (#)
+!(#) EXTREME care is required when doing atom typing on compounds that look like this. Use ONLY
+!on NEUTRAL METHYLAMINE groups, NOT Schiff Bases, but DO use on 2 out of 3 guanidine nitrogens
+MASS -1 HG51 1.00800 H ! nonpolar H, neutral 5-mem planar ring C, LJ based on benzene
+MASS -1 HG52 1.00800 H ! Aldehyde H, formamide H {(RCOH);} nonpolar H, neutral 5-mem planar ring C adjacent to heteroatom or + charge
+MASS -1 HG53 1.00800 H ! nonpolar H, +ve charge HIS he1(+1)
+MASS -1 HG61 1.00800 H ! aromatic H
+MASS -1 HG62 1.00800 H ! nonpolar H, neutral 6-mem planar ring C adjacent to heteroatom
+MASS -1 HG63 1.00800 H ! nonpolar H, NAD+ nicotineamide all ring CH hydrogens
+MASS -1 HG71 1.00800 H ! nonpolar H, neutral 7-mem arom ring, AZUL, azulene, kevo
+!carbons
+MASS -1 CGT1 12.01100 C ! internal alkyne R-C#C
+MASS -1 CGT2 12.01100 C ! terminal alkyne H-C#C
+MASS -1 CGN1 12.01100 C ! C for cyano group
+MASS -1 CGD1 12.01100 C ! {alkene;} RHC= {;} imine C
+MASS -1 CGD2 12.01100 C ! {alkene;} H2C=
+MASS -1 CG10 12.01100 C ! double bond carbon adjacent to heteroatom. In conjugated systems, the atom to which it is double bonded must be CG2DC1.
+MASS -1 CG20 12.01100 C ! double bond carbon adjacent to heteroatom. In conjugated systems, the atom to which it is double bonded must be CG2DC2.
+MASS -1 CGC1 12.01100 C ! conjugated alkenes, R2C=CR2
+MASS -1 CGC2 12.01100 C ! conjugated alkenes, R2C=CR2
+MASS -1 CGC3 12.01100 C ! conjugated alkenes, H2C=
+MASS -1 CGN1 12.01100 C ! conjugated C in guanidine/guanidinium
+MASS -1 CGN2 12.01100 C ! conjugated C in amidinium cation
+MASS -1 CGO1 12.01100 C ! carbonyl C: amides
+MASS -1 CGO2 12.01100 C ! carbonyl C: esters, {[neutral]} carboxylic acids
+MASS -1 CGO3 12.01100 C ! carbonyl C: {[negative]} carboxylates
+MASS -1 CGO4 12.01100 C ! carbonyl C: aldehydes
+MASS -1 CGO5 12.01100 C ! carbonyl C: ketones
+MASS -1 CGO6 12.01100 C ! carbonyl C: urea, carbonate
+MASS -1 CGO7 12.01100 C ! CO2 carbon
+MASS -1 CR51 12.01100 C ! 5-mem ring, his CG, CD2(0), trp
+MASS -1 CR52 12.01100 C ! 5-mem ring, double bound to N, PYRZ, pyrazole
+MASS -1 CR53 12.01100 C ! 5-mem ring, double bound to N and adjacent to another heteroatom, purine C8, his CE1 (0,+1), 2PDO, kevo
+MASS -1 CR57 12.01100 C ! 5-mem ring, bipyrroles
+MASS -1 CGC1 12.01100 C ! same as CGC1 but in 5-membered ring with exocyclic double bond
+MASS -1 CGC2 12.01100 C ! same as CGC2 but in 5-membered ring with exocyclic double bond
+MASS -1 CG1O 12.01100 C ! same as CG10 but in 5-membered ring with exocyclic double bond
+MASS -1 CG2O 12.01100 C ! same as CG20 but in 5-membered ring with exocyclic double bond
+MASS -1 CR61 12.01100 C ! 6-mem aromatic C
+MASS -1 CR62 12.01100 C ! 6-mem aromatic C for protonated pyridine (NIC) and rings containing carbonyls (see CG2R63) (NA)
+MASS -1 CR63 12.01100 C ! 6-mem aromatic amide carbon (NA) (and other 6-mem aromatic carbonyls?)
+MASS -1 CR64 12.01100 C ! 6-mem aromatic amidine and guanidine carbon (between 2 or 3 Ns and double-bound to one of them), NA, PYRM
+MASS -1 CR66 12.01100 C ! 6-mem aromatic carbon bound to F
+MASS -1 CR67 12.01100 C ! 6-mem aromatic carbon of biphenyl
+MASS -1 CRCO 12.01100 C ! 6/5-mem ring bridging C, guanine C4,C5, trp
+MASS -1 CR71 12.01100 C ! 7-mem ring arom C, AZUL, azulene, kevo
+MASS -1 CRC7 12.01100 C ! sp2 ring connection with single bond(!), AZUL, azulene, kevo
+MASS -1 CH01 12.01100 C ! aliphatic C, no hydrogens, neopentane
+MASS -1 CH02 12.01100 C ! aliphatic C, no hydrogens, trifluoromethyl
+MASS -1 CH11 12.01100 C ! aliphatic C with 1 H, CH
+MASS -1 CH12 12.01100 C ! aliphatic C with 1 H, difluoromethyl
+MASS -1 CH14 12.01100 C ! aliphatic C with 1 H, adjacent to positive N (PROT NTER) (+)
+MASS -1 CH21 12.01100 C ! aliphatic C for CH2
+MASS -1 CH22 12.01100 C ! aliphatic C for CH2, monofluoromethyl
+MASS -1 CH23 12.01100 C ! aliphatic C for CH2, thiolate carbon
+MASS -1 CH24 12.01100 C ! aliphatic C for CH2, adjacent to positive N (piperidine) (+)
+MASS -1 CH31 12.01100 C ! aliphatic C for methyl group (-CH3)
+MASS -1 CH34 12.01100 C ! aliphatic C for methyl group (-CH3), adjacent to positive N (PROT NTER) (+)
+MASS -1 CAM0 12.01100 C ! aliphatic C for CH3, NEUTRAL trimethylamine methyl carbon (#)
+MASS -1 CAM1 12.01100 C ! aliphatic C for CH3, NEUTRAL dimethylamine methyl carbon (#)
+MASS -1 CAM2 12.01100 C ! aliphatic C for CH3, NEUTRAL methylamine methyl carbon (#)
+!(#) EXTREME care is required when doing atom typing on compounds that look like this. Use ONLY
+!on NEUTRAL METHYLAMINE groups, NOT ETHYL, NOT Schiff Bases, but DO use on 2 out of 3 guanidine nitrogens
+MASS -1 CC31 12.01100 C ! cyclopropyl carbon
+MASS -1 CC41 12.01100 C ! cyclobutyl carbon
+MASS -1 CC50 12.01100 C ! 5-mem ring aliphatic quaternary C (cholesterol, bile acids)
+MASS -1 CC51 12.01100 C ! 5-mem ring aliphatic CH (proline CA, furanoses)
+MASS -1 CC52 12.01100 C ! 5-mem ring aliphatic CH2 (proline CB/CG/CD, THF, deoxyribose)
+MASS -1 CC53 12.01100 C ! 5-mem ring aliphatic CH adjacent to positive N (proline.H+ CA) (+)
+MASS -1 CC54 12.01100 C ! 5-mem ring aliphatic CH2 adjacent to positive N (proline.H+ CD) (+)
+MASS -1 CRC1 12.01100 C ! bridgehead in bicyclic systems containing at least one 5-membered or smaller ring
+!(+) Includes protonated Shiff base (NG3D5, NR52 in 2HPP) but NOT amidinium (NG2R52 in IMIM), guanidinium
+!nitrogens
+MASS -1 N1T1 14.00700 N ! N for cyano group
+!MASS  -1  NG1D1   14.00700 N ! terminal N in azides, lsk
+MASS -1 N2D1 14.00700 ! N for neutral imine/Schiff's base (C=N-R, acyclic amidine, gunaidine)
+MASS -1 N2S0 14.00700 N ! N,N-disubstituted amide, proline N (CO=NRR')
+MASS -1 N2S1 14.00700 N ! peptide nitrogen (CO=NHR)
+MASS -1 N2S2 14.00700 N ! terminal amide nitrogen (CO=NH2)
+MASS -1 N2S3 14.00700 N ! external amine ring nitrogen (planar/aniline), phosphoramidate
+!MASS  -1  NG2S4   14.00700 N ! neutral hydroxamic acid
+MASS -1 N2O1 14.00700 N ! NITB, nitrobenzene
+MASS -1 N2P1 14.00700 N ! N for protonated imine/Schiff's base (C=N(+)H-R, acyclic amidinium, guanidinium)
+MASS -1 NR43 14.00700 N ! amide in 4-memebered ring (planar), AZDO, lsk
+MASS -1 NR50 14.00700 N ! double bound neutral 5-mem planar ring, purine N7
+MASS -1 NR51 14.00700 N ! single bound neutral 5-mem planar (all atom types sp2) ring, his, trp pyrrole (fused)
+MASS -1 NR52 14.00700 N ! protonated schiff base, amidinium, guanidinium in 5-membered ring, HIS, 2HPP, kevo
+MASS -1 NR53 14.00700 N ! amide in 5-memebered NON-SP2 ring (slightly pyramidized), 2PDO, kevo
+MASS -1 NR57 14.00700 N ! 5-mem ring, bipyrroles
+MASS -1 NR60 14.00700 N ! double bound neutral 6-mem planar ring, pyr1, pyzn
+MASS -1 NR61 14.00700 N ! single bound neutral 6-mem planar ring imino {nitrogen;} glycosyl linkage
+MASS -1 NR62 14.00700 N ! double bound 6-mem planar ring with heteroatoms in o or m, pyrd, pyrm
+MASS -1 NR67 14.00700 N ! 6-mem planar ring substituted with 6-mem planar ring (N-phenyl pyridinones etc.)
+MASS -1 NRC0 14.00700 N ! 6/5-mem ring bridging N, indolizine, INDZ, kevo
+MASS -1 NG01 14.00700 N ! neutral trimethylamine nitrogen
+MASS -1 NG11 14.00700 N ! neutral dimethylamine nitrogen
+MASS -1 NG21 14.00700 N ! neutral methylamine nitrogen
+MASS -1 NG31 14.00700 N ! neutral ammonia nitrogen
+MASS -1 NC51 14.00700 N ! secondary sp3 amine in 5-membered ring
+MASS -1 N3N1 14.00700 N ! N in hydrazine, HDZN
+MASS -1 N3P0 14.00700 N ! quarternary N+, choline
+MASS -1 N3P1 14.00700 N ! tertiary NH+ (PIP)
+MASS -1 N3P2 14.00700 N ! secondary NH2+ (proline)
+MASS -1 N3P3 14.00700 N ! primary NH3+, phosphatidylethanolamine
+!oxygens
+MASS -1 O2D1 15.99940 O ! carbonyl O: amides, esters, {[neutral]} carboxylic acids, aldehydes, uera
+MASS -1 O2D2 15.99940 O ! carbonyl O: negative groups: carboxylates, carbonate
+MASS -1 O2D3 15.99940 O ! carbonyl O: ketones
+MASS -1 O2D4 15.99940 O ! 6-mem aromatic carbonyl oxygen (nucleic bases)
+MASS -1 O2D5 15.99940 O ! CO2 oxygen
+MASS -1 O2N1 15.99940 O ! NITB, nitrobenzene
+MASS -1 O2P1 15.99940 O ! =O in phosphate or sulfate
+MASS -1 OR50 15.99940 O ! FURA, furan
+MASS -1 OR60 15.99940 O ! O in 6-mem cyclic enol ether (PY01, PY02) or ester
+MASS -1 OG01 15.99940 O ! ether -O- !SHOULD WE HAVE A SEPARATE ENOL ETHER??? IF YES, SHOULD WE MERGE IT WITH OG3R60???
+MASS -1 OG02 15.99940 O ! ester -O-
+MASS -1 OG03 15.99940 O ! phosphate/sulfate ester oxygen
+MASS -1 OG04 15.99940 O ! linkage oxygen in pyrophosphate/pyrosulphate
+MASS -1 OG11 15.99940 O ! hydroxyl oxygen
+MASS -1 OG12 15.99940 O ! ionized alcohol oxygen
+MASS -1 OC31 15.99940 O ! epoxide oxygen, 1EOX, 1BOX, sc
+MASS -1 OC51 15.99940 O ! 5-mem furanose ring oxygen (ether)
+MASS -1 OC61 15.99940 O ! DIOX, dioxane, ether in 6-membered ring !SHOULD WE MERGE THIS WITH OG3R60???
+!sulphurs
+MASS -1 S2D1 32.06000 S ! thiocarbonyl S
+MASS -1 SR50 32.06000 S ! THIP, thiophene
+MASS -1 S311 32.06000 S ! sulphur, SH, -S-
+MASS -1 S301 32.06000 S ! sulfur C-S-S-C type
+MASS -1 S302 32.06000 S ! thiolate sulfur (-1)
+MASS -1 S3O1 32.06000 S ! sulfate -1 sulfur
+MASS -1 S3O2 32.06000 S ! neutral sulfone/sulfonamide sulfur
+MASS -1 S3O3 32.06000 S ! neutral sulfoxide sulfur
+!halogens
+MASS -1 CGA1 35.45300 Cl ! CLET, DCLE, chloroethane, 1,1-dichloroethane
+MASS -1 CGA3 35.45300 Cl ! TCLE, 1,1,1-trichloroethane
+MASS -1 CGR1 35.45300 Cl ! CHLB, chlorobenzene
+MASS -1 BGA1 79.90400 Br ! BRET, bromoethane
+MASS -1 BGA2 79.90400 Br ! DBRE, 1,1-dibromoethane
+MASS -1 BGA3 79.90400 Br ! TBRE, 1,1,1-dibromoethane
+MASS -1 BGR1 79.90400 Br ! BROB, bromobenzene
+MASS  -1  IGR1     126.90447 I ! IODB, iodobenzene
+MASS  -1  FGA1      18.99800 F ! aliphatic fluorine, monofluoro
+MASS  -1  FGA2      18.99800 F ! aliphatic fluorine, difluoro
+MASS  -1  FGA3      18.99800 F ! aliphatic fluorine, trifluoro
+MASS  -1  FGP1      18.99800 F ! anionic F, for ALF4 AlF4-
+MASS  -1  FGR1      18.99800 F ! aromatic flourine
+!miscellaneous
+MASS -1 PG01 30.97380 P ! neutral phosphate
+MASS -1 PG11 30.97380 P ! phosphate -1
+MASS -1 PG21 30.97380 P ! phosphate -2
+MASS  -1  ALG1      26.98154 Al ! Aluminum, for ALF4, AlF4-
+MASS -1 LPH1 0.00000 X ! Lone pair for halogens
+!MASS  -1  HGTIP3     1.00800 H ! polar H, TIPS3P WATER HYDROGEN
+!MASS  -1  OGTIP3    15.99940 O ! TIPS3P WATER OXYGEN
+!MASS  -1  DUM        0.00000 X ! dummy atom
+!MASS  -1  HE         4.00260 He ! helium
+!MASS  -1  NE        20.17970 Ne ! neon
+MASS  -1  HT         1.00800 H ! TIPS3P WATER HYDROGEN
+MASS  -1  HX         1.00800 H ! hydroxide hydrogen
+MASS  -1  OT        15.99940 O ! TIPS3P WATER OXYGEN
+MASS  -1  OX        15.99940 O ! hydroxide oxygen
+MASS  -1  LIT        6.94100 LI ! Lithium ion
+MASS  -1  SOD       22.98977 NA ! Sodium Ion
+MASS  -1  MG        24.30500 MG ! Magnesium Ion
+MASS  -1  POT       39.09830 K ! Potassium Ion
+MASS  -1  CAL       40.08000 CA ! Calcium Ion
+MASS  -1  RUB       85.46780 RB ! Rubidium Ion
+MASS  -1  CES      132.90545 CS ! Cesium Ion
+MASS  -1  BAR      137.32700 BA ! Barium Ion
+MASS  -1  ZN        65.37000 ZN ! zinc (II) cation
+MASS  -1  CAD      112.41100 CD ! cadmium (II) cation
+MASS  -1  CLA       35.45000 CL ! Chloride Ion
+
+DECL -CA  
+DECL -C  
+DECL -O  
+DECL +N  
+DECL +HN  
+DECL +CA  
+DEFA FIRS NTER LAST CTER   
+AUTO ANGLES DIHE PATCH
+
+RESI TIP3         0.000 ! tip3p water model, generate using noangle nodihedral
+GROUP
+ATOM OH2  OT     -0.834
+ATOM H1   HT      0.417
+ATOM H2   HT      0.417
+BOND OH2 H1 OH2 H2 H1 H2    ! the last bond is needed for shake
+ANGLE H1 OH2 H2             ! required
+DONOR H1 OH2
+DONOR H2 OH2
+ACCEPTOR OH2
+PATCHING FIRS NONE LAST NONE
+
+! Ion parameters from Benoit Roux and Coworkers
+! As of 8/10 new NBFIX terms required
+!
+RESI LIT       1.00 ! Lithium Ion
+GROUP
+ATOM LIT  LIT  1.00
+PATCHING FIRST NONE LAST NONE
+
+RESI SOD       1.00 ! Sodium Ion
+GROUP
+ATOM SOD  SOD  1.00
+PATCHING FIRST NONE LAST NONE
+
+RESI MG        2.00 ! Magnesium Ion
+GROUP
+ATOM MG   MG   2.00
+PATCHING FIRST NONE LAST NONE
+
+RESI POT       1.00 ! Potassium Ion
+GROUP
+ATOM POT   POT 1.00
+PATCHING FIRST NONE LAST NONE
+
+RESI CAL       2.00 ! Calcium Ion
+GROUP
+ATOM CAL  CAL  2.00
+PATCHING FIRST NONE LAST NONE
+
+RESI RUB       1.00 ! Rubidium Ion
+GROUP
+ATOM RUB  RUB  1.00
+PATCHING FIRST NONE LAST NONE
+
+RESI CES       1.00 ! Cesium Ion
+GROUP
+ATOM CES  CES  1.00
+PATCHING FIRST NONE LAST NONE
+
+RESI BAR       2.00 ! Barium Ion
+GROUP
+ATOM BAR  BAR  2.00
+PATCHING FIRST NONE LAST NONE
+
+RESI ZN2       2.00 ! Zinc (II) cation, Roland Stote
+GROUP
+ATOM ZN   ZN   2.00
+PATCHING FIRST NONE LAST NONE
+
+RESI CD2       2.00 ! Cadmium (II) cation
+GROUP
+ATOM CD   CAD  2.00
+PATCHING FIRST NONE LAST NONE
+
+RESI CLA      -1.00 ! Chloride Ion
+GROUP
+ATOM CLA  CLA -1.00
+PATCHING FIRST NONE LAST NONE
+
+
+
+RESI AAM3 0.000 ! param penalty= 0.000 {;} charge penalty= 0.929
+GROUP            ! CHARGE   CH_PENALTY
+ATOM C1 CH31 -0.269 ! 0.050
+ATOM H2     HGA3    0.090 !    0.000
+ATOM H3     HGA3    0.090 !    0.000
+ATOM H4     HGA3    0.090 !    0.000
+ATOM C5 CH11 -0.081 ! 0.631
+ATOM H6     HGA1    0.090 !    0.050
+ATOM C7 CGO1 0.522 ! 0.856
+ATOM O8 O2D1 -0.536 ! 0.000
+ATOM N9 N2S2 -0.631 ! 0.911
+ATOM H10    HGP1    0.310 !    0.262
+ATOM H11    HGP1    0.310 !    0.262
+ATOM C12 CH21 -0.153 ! 0.537
+ATOM H13    HGA2    0.090 !    0.000
+ATOM H14    HGA2    0.090 !    0.000
+ATOM C15 CH11 -0.048 ! 0.631
+ATOM H16    HGA1    0.090 !    0.050
+ATOM C17 CGO1 0.508 ! 0.862
+ATOM O18 O2D1 -0.539 ! 0.000
+ATOM N19 N2S2 -0.647 ! 0.929
+ATOM H20    HGP1    0.310 !    0.262
+ATOM H21    HGP1    0.310 !    0.262
+ATOM C22 CH21 -0.181 ! 0.380
+ATOM H23    HGA2    0.090 !    0.000
+ATOM H24    HGA2    0.090 !    0.000
+ATOM C25 CH21 -0.172 ! 0.000
+ATOM H26    HGA2    0.090 !    0.000
+ATOM H27    HGA2    0.090 !    0.000
+ATOM C28 CGO1 0.544 ! 0.000
+ATOM O29 O2D1 -0.544 ! 0.000
+ATOM N30 N2S2 -0.623 ! 0.000
+ATOM H31    HGP1    0.310 !    0.000
+ATOM H32    HGP1    0.310 !    0.000
+               ! Bond order
+BOND C1   H2   ! 1
+BOND C1   H3   ! 1
+BOND C1   H4   ! 1
+BOND C1   C5   ! 1
+BOND C5   H6   ! 1
+BOND C5   C7   ! 1
+BOND C5   C12  ! 1
+BOND C7   O8   ! 2
+BOND C7   N9   ! 1
+BOND N9   H10  ! 1
+BOND N9   H11  ! 1
+BOND C12  H13  ! 1
+BOND C12  H14  ! 1
+BOND C12  C15  ! 1
+BOND C15  H16  ! 1
+BOND C15  C17  ! 1
+BOND C15  C22  ! 1
+BOND C17  O18  ! 2
+BOND C17  N19  ! 1
+BOND N19  H20  ! 1
+BOND N19  H21  ! 1
+BOND C22  H23  ! 1
+BOND C22  H24  ! 1
+BOND C22  C25  ! 1
+BOND C25  H26  ! 1
+BOND C25  H27  ! 1
+BOND C25  C28  ! 1
+BOND C28  O29  ! 2
+BOND C28  N30  ! 1
+BOND N30  H31  ! 1
+BOND N30  H32  ! 1
+IMPR C7     C5     N9     O8    
+IMPR C17    C15    N19    O18   
+IMPR C28    C25    N30    O29   
+

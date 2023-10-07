@@ -1,0 +1,54 @@
+PSF
+
+       3 !NTITLE
+ REMARKS original generated structure x-plor psf file
+ REMARKS topology PVA_autopsf-temp.top 
+ REMARKS segment XO1 { first none; last none; auto angles dihedrals }
+
+       9 !NATOM
+       1 XO1  0    PVA  C1   CH21   0.050000       12.0110           0
+       2 XO1  0    PVA  H2   HGA2   0.090000        1.0080           0
+       3 XO1  0    PVA  H3   HGA2   0.090000        1.0080           0
+       4 XO1  0    PVA  C4   CH31  -0.270000       12.0110           0
+       5 XO1  0    PVA  H5   HGA3   0.090000        1.0080           0
+       6 XO1  0    PVA  H6   HGA3   0.090000        1.0080           0
+       7 XO1  0    PVA  H7   HGA3   0.090000        1.0080           0
+       8 XO1  0    PVA  O8   OG11  -0.650000       15.9994           0
+       9 XO1  0    PVA  H9   HGP1   0.420000        1.0080           0
+
+       8 !NBOND: bonds
+       1       2       1       3       1       4       1       8
+       4       5       4       6       4       7       8       9
+
+      13 !NTHETA: angles
+       1       8       9       1       4       7       1       4       6
+       1       4       5       2       1       8       2       1       4
+       2       1       3       3       1       8       3       1       4
+       4       1       8       5       4       7       5       4       6
+       6       4       7
+
+      12 !NPHI: dihedrals
+       2       1       4       5       2       1       4       6
+       2       1       4       7       2       1       8       9
+       3       1       4       5       3       1       4       6
+       3       1       4       7       3       1       8       9
+       4       1       8       9       5       4       1       8
+       6       4       1       8       7       4       1       8
+
+       0 !NIMPHI: impropers
+
+
+       0 !NDON: donors
+
+
+       0 !NACC: acceptors
+
+
+       0 !NNB
+
+       0       0       0       0       0       0       0       0
+       0
+
+       1       0 !NGRP
+       0       0       0
+
